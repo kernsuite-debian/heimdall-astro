@@ -3,7 +3,7 @@ Section: science
 Priority: optional
 Maintainer: KERN packaging <packaging@kernsuite.info>
 Build-Depends: debhelper (>=9), dh-autoreconf, dedisp-ajameson-dev,
- libthrust-dev, libboost-dev, psrdada, nvidia-cuda-toolkit, libtool-bin
+ libthrust-dev, libboost-dev, psrdada, nvidia-cuda-toolkit, libtool-bin, python
 Standards-Version: 3.9.8
 Homepage: https://sourceforge.net/projects/heimdall-astro/
 
