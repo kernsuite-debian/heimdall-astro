@@ -1,0 +1,4 @@
+# You must remove unused comment lines for the released package.
+Fix-m4-rules.patch
+Dont-pass-CPPFLAGS-to-cuda.patch
+Dont-take-abs-of-unsigned-value.patch

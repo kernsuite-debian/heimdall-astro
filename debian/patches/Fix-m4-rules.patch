@@ -1,0 +1,27 @@
+Description: small improvements to the m4 files
+
+
+--- heimdall-astro-0+20180308.orig/config/dedisp.m4
++++ heimdall-astro-0+20180308/config/dedisp.m4
+@@ -18,7 +18,7 @@ AC_DEFUN([SWIN_LIB_DEDISP],
+     SWIN_PACKAGE_FIND([dedisp],[libdedisp.*])
+     SWIN_PACKAGE_TRY_LINK([dedisp],[#include <dedisp.h>],
+                           [dedisp_get_error_string (DEDISP_NO_ERROR);],
+-                          [-ldedisp -lstdc++])
++                          [-ldedisp -lstdc++ -lcuda -lcudart])
+   fi
+ 
+   AC_MSG_RESULT([$have_dedisp])
+--- heimdall-astro-0+20180308.orig/config/psrdada.m4
++++ heimdall-astro-0+20180308/config/psrdada.m4
+@@ -24,8 +24,8 @@ AC_DEFUN([SWIN_LIB_PSRDADA],
+     fi
+ 
+     if test x"$with_psrdada_dir" = x; then
+-      psrdada_cflags=`which psrdada_cflags`
+-      psrdada_ldflags=`which psrdada_ldflags`
++      psrdada_cflags=""
++      psrdada_ldflags="-lpsrdada -lcudart -L/usr/lib/x86_64-linux-gnu -lgsl -lgslcblas -lm"
+     else
+       psrdada_cflags=$with_psrdada_dir/bin/psrdada_cflags
+       psrdada_ldflags=$with_psrdada_dir/bin/psrdada_ldflags

@@ -1,0 +1,17 @@
+Description: Dont take absolute value of unsigned int
+
+--- heimdall-astro-0+20180308.orig/Applications/Candidates.C
++++ heimdall-astro-0+20180308/Applications/Candidates.C
+@@ -70,9 +70,9 @@ bool Candidate::is_coincident(const Cand
+   const int64_t tol = sep_time * powf(2,max(c->filter,filter));
+ 
+   // change temporal coincidence on bens suggestion 6/8/2012
+-  return ( (abs(c->sample_idx - sample_idx) <= tol) &&
+-           (abs(c->dm_trial - dm_trial) <= sep_dm) &&
+-           (abs(c->filter - filter) <= sep_filter) &&
++  return ( ((c->sample_idx - sample_idx) <= tol) &&
++           ((c->dm_trial - dm_trial) <= sep_dm) &&
++           ((c->filter - filter) <= sep_filter) &&
+            ((fabsf(c->snr - snr) / (c->snr + snr)) <= sep_snr));
+ }
+ 

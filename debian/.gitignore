@@ -1,0 +1,8 @@
+.debhelper/
+autoreconf.after
+autoreconf.before
+files
+*.debhelper.log
+*.substvars
+heimdall-astro/
+
