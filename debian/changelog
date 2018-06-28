@@ -1,3 +1,12 @@
+heimdall-astro (0.0~git20180525.86030c5-1kern1) bionic; urgency=medium
+
+  [ Gijs Molenaar ]
+  * add missing Python dependency
+  * add watch file
+  * New upstream version 0.0~git20180525.86030c5
+
+ -- KERN packaging <packaging@kernsuite.info>  Thu, 28 Jun 2018 18:18:14 +0200
+
 heimdall-astro (0+20180308-1kern1) bionic; urgency=low
 
   * Initial release.
